@@ -13,6 +13,6 @@ services:
         environment:
             - WIKI_PAGE_TITLE=Docker Pukiwiki
             - WIKI_PUKIWIKI_URL=http://example.com/
-            - WIKI_MODIFIER="Admin"
+            - WIKI_MODIFIER=Admin
             - WIKI_MODIFIER_LINK=http://example.com
             - ADMINPASS=anypass
