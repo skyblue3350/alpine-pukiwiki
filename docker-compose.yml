@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+    pukiwiki:
+        build: .
+        # image: 
+        restart: always
+        container_name: pukiwiki
+        ports:
+            - 8080:80
+        volumes:
+            - ./data:/var/www
+        environment:
+            - WIKI_PAGE_TITLE=Docker Pukiwiki
+            - WIKI_PUKIWIKI_URL=http://example.com/
+            - WIKI_MODIFIER="Admin"
+            - WIKI_MODIFIER_LINK=http://example.com
+            - ADMINPASS=anypass
