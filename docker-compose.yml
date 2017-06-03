@@ -2,8 +2,8 @@ version: "2"
 
 services:
     pukiwiki:
-        build: .
-        # image: 
+        # build: .
+        image: skyblue3350/alpine-pukiwiki
         restart: always
         container_name: pukiwiki
         ports:
