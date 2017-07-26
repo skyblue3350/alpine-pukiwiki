@@ -30,7 +30,7 @@ COPY conf/default.conf /etc/nginx/conf.d/default.conf
 COPY entry.sh /sbin/entry.sh
 RUN chmod 755 /sbin/entry.sh \
   && mkdir -p /run/nginx \
-  && apk add --no-cache nginx php7-fpm
+  && apk add --no-cache nginx php7-fpm php7-json php7-curl
 
 VOLUME ["${WIKI_INSTALL_DIR}"]
 ENTRYPOINT ["/sbin/entry.sh"]
