@@ -27,6 +27,7 @@ RUN rm -rf $WIKI_INSTALL_DIR* \
 
 # nginx & php-fpm config
 COPY conf/default.conf /etc/nginx/conf.d/default.conf
+COPY conf/php.ini /etc/php7/php.ini
 COPY entry.sh /sbin/entry.sh
 RUN chmod 755 /sbin/entry.sh \
   && mkdir -p /run/nginx \
